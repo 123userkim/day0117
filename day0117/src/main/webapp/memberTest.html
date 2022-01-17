@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+		/*
+		$.ajax({
+			url:"Member",			
+			success:function(data){
+				$("div").html(data);
+			}
+		})*/
+		
+		/*
+		$.get("Member",function(data){
+			$("div").html(data);
+		})*/
+		
+		$("div").load("Member");
+	})
+});
+</script>
+</head>
+<body>
+	<button>이름 읽어오기</button>
+	<div></div>
+</body>
+</html>

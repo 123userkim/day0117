@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js
+"></script>
+<script type="text/javascript">
+	$(function(){
+		/*
+		$("#btnGET").click(function(){
+			$.get("Hello",function(data){
+				alert(data);
+			});
+		});
+		
+		$("#btnPOST").click(function(){
+			$.post("Hello",function(data){
+				alert(data);		
+			})	
+		});*/
+		
+	 
+		$("#btnGET").click(function(){
+			$.ajax({
+				url:"Hello",
+				type:"get",
+				success:function(data){
+					alert(data);
+				}
+			});
+		});
+		
+		$("#btnPOST").click(function(){
+			$.ajax({
+				url:"Hello",
+				type:"post",
+				success:function(data){
+					alert(data);
+				}
+			});
+		});
+				
+	});
+</script>
+</head>
+<body>
+	<button id="btnGET">get방식의 요청</button>
+	<button id="btnPOST">post방식의 요청</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

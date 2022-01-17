@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js
+"></script>
+<script type="text/javascript">
+$(function (){
+	$("button").click(function(){
+		let data = $("#f").serializeArray();
+		/*
+		$.ajax({
+			url:"Book",
+			data:data,
+			type:"post",
+			success:function(){
+				
+			}
+		});*/
+		$.post("Book",data,function(){
+			
+		});
+	});
+});
+</script>
+</head>
+<body>
+	<form id="f">
+		도서번호 : <input type="text" id="bookid"  name="bookid"><br>
+		도서명 : <input type="text"  id="bookname" name="bookname"><br>
+		출판사 : <input type="text" id="publisher" name="publisher"><br>
+		가격 : <input type="text" id="price" name="price"><br>
+	</form>
+	<button>등록</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
